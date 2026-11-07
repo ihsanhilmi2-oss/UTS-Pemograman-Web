@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - BookStore</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="tracking-page">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <div class="dashboard-logo">
+            BookStore.
+        </div>
+
+        <nav class="dashboard-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="tracking.html" class="active">Tracking</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+
+        <a href="dashboard.html" class="btn">
+            Kembali
+        </a>
+
+    </header>
+
+    <main class="tracking-container">
+
+        <!-- Judul -->
+        <section class="tracking-heading">
+            <h1>Tracking Pengiriman</h1>
+            <p>Pantau status pengiriman pesanan buku Anda.</p>
+        </section>
+
+        <!-- Form Pencarian -->
+        <section class="card tracking-search">
+
+            <h2>Cari Pesanan</h2>
+
+            <form id="trackingForm">
+
+                <div class="form-group">
+                    <label for="nomorDO">Nomor Delivery Order</label>
+
+                    <input
+                        type="text"
+                        id="nomorDO"
+                        placeholder="Contoh: DO1794036598399"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn tracking-button">
+                    Cari Pesanan
+                </button>
+
+            </form>
+
+            <p id="pesanError"></p>
+
+        </section>
+
+        <!-- Hasil Tracking -->
+        <section class="card tracking-result" id="hasilTracking">
+
+            <h2>Informasi Pesanan</h2>
+
+            <div class="tracking-status">
+                <span>Status Pengiriman</span>
+                <h3 id="statusPengiriman">-</h3>
+            </div>
+
+            <!-- Progress Pengiriman -->
+            <div class="progress-container">
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="progress-label">
+                    <span>Diproses</span>
+                    <span>Dikirim</span>
+                    <span>Selesai</span>
+                </div>
+
+            </div>
+
+            <!-- Detail Pemesan -->
+            <h3 class="tracking-subtitle">Detail Pemesan</h3>
+
+            <div class="tracking-details">
+
+                <div class="detail-item">
+                    <span>Nomor DO</span>
+                    <strong id="detailDO">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Nama Pemesan</span>
+                    <strong id="detailNama">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Nama Buku</span>
+                    <strong id="detailBuku">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Jumlah Buku</span>
+                    <strong id="detailJumlah">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Ekspedisi</span>
+                    <strong id="detailEkspedisi">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Tanggal Kirim</span>
+                    <strong id="detailTanggal">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Jenis Paket</span>
+                    <strong id="detailPaket">-</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>Total Pembayaran</span>
+                    <strong id="detailTotal">-</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>&copy; 2026 BookStore. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/tracking.js"></script>
+
+</body>
+</html>

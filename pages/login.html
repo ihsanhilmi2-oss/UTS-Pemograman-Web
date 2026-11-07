@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BookStore</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="login-page">
+
+    <main class="login-wrapper">
+
+        <!-- Bagian informasi toko buku -->
+        <section class="login-banner">
+            <div class="banner-content">
+                <h1>BookStore.</h1>
+                <h2>Temukan Buku Favoritmu!</h2>
+                <p>
+                    Jelajahi berbagai pilihan buku menarik
+                    dan pesan buku favoritmu dengan mudah.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bagian form login -->
+        <section class="login-form-section">
+
+            <div class="login-card">
+
+                <h2>Selamat Datang!</h2>
+                <p class="login-subtitle">
+                    Silakan login untuk melanjutkan.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Masukkan email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn login-button">
+                        Login
+                    </button>
+
+                </form>
+
+                <div class="login-links">
+                    <button type="button" id="forgotBtn">
+                        Lupa Password?
+                    </button>
+
+                    <p>
+                        Belum punya akun?
+                        <button type="button" id="registerBtn">
+                            Daftar
+                        </button>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Lupa Password -->
+    <div class="modal" id="forgotModal">
+        <div class="modal-content">
+
+            <h2>Lupa Password</h2>
+            <p>Masukkan email untuk pemulihan akun.</p>
+
+            <div class="form-group">
+                <label for="forgotEmail">Email</label>
+                <input
+                    type="email"
+                    id="forgotEmail"
+                    placeholder="Masukkan email"
+                >
+            </div>
+
+            <button type="button" class="btn" id="resetBtn">
+                Kirim
+            </button>
+
+            <button type="button" class="btn btn-danger" id="closeForgot">
+                Tutup
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Modal Daftar -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+
+            <h2>Daftar Akun</h2>
+            <p>Buat akun baru BookStore.</p>
+
+            <div class="form-group">
+                <label for="registerName">Nama Lengkap</label>
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Masukkan nama"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Masukkan email"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Buat password"
+                >
+            </div>
+
+            <button type="button" class="btn" id="submitRegister">
+                Daftar Sekarang
+            </button>
+
+            <button type="button" class="btn btn-danger" id="closeRegister">
+                Tutup
+            </button>
+
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+</html>
+

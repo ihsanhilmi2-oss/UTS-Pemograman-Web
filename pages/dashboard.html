@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BookStore</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="dashboard-page">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="dashboard-logo">
+            BookStore.
+        </div>
+
+        <nav class="dashboard-nav">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+
+        <button class="btn btn-danger" id="logoutBtn">
+            Logout
+        </button>
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- Greeting -->
+        <section class="welcome-section">
+            <div>
+                <h1 id="greeting">Selamat Datang!</h1>
+                <p>Selamat berbelanja di BookStore.</p>
+            </div>
+
+            <div class="welcome-icon">
+                📚
+            </div>
+        </section>
+
+        <!-- Menu Utama -->
+        <section class="dashboard-menu">
+
+            <h2>Menu Utama</h2>
+            <p class="section-description">
+                Pilih menu untuk mengelola aktivitas toko buku.
+            </p>
+
+            <div class="menu-grid">
+
+                <!-- Katalog -->
+                <a href="stok.html" class="menu-card">
+                    <div class="menu-icon">📚</div>
+                    <h3>Informasi Stok / Katalog</h3>
+                    <p>Lihat dan kelola daftar stok buku.</p>
+                    <span>Buka Menu →</span>
+                </a>
+
+                <!-- Tracking -->
+                <a href="tracking.html" class="menu-card">
+                    <div class="menu-icon">🚚</div>
+                    <h3>Tracking Pengiriman</h3>
+                    <p>Pantau status pengiriman pesanan.</p>
+                    <span>Buka Menu →</span>
+                </a>
+
+                <!-- Laporan -->
+                <a href="#laporan" class="menu-card">
+                    <div class="menu-icon">📊</div>
+                    <h3>Laporan Pemesanan</h3>
+                    <p>Lihat ringkasan data pemesanan buku.</p>
+                    <span>Lihat Laporan →</span>
+                </a>
+
+                <!-- History -->
+                <a href="#history" class="menu-card">
+                    <div class="menu-icon">📋</div>
+                    <h3>History Transaksi</h3>
+                    <p>Lihat riwayat transaksi pelanggan.</p>
+                    <span>Lihat Riwayat →</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Laporan Pemesanan -->
+        <section class="dashboard-section" id="laporan">
+
+            <h2>Laporan Pemesanan</h2>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+                    <h3>Total Pemesanan</h3>
+                    <p>25</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Pesanan Diproses</h3>
+                    <p>8</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Pesanan Selesai</h3>
+                    <p>17</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- History Transaksi -->
+        <section class="dashboard-section" id="history">
+
+            <h2>History Transaksi</h2>
+
+            <div class="card">
+                <p>Berikut merupakan contoh riwayat transaksi.</p>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nomor Transaksi</th>
+                                <th>Tanggal</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>TRX001</td>
+                                <td>07-11-2026</td>
+                                <td>Selesai</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>TRX002</td>
+                                <td>06-11-2026</td>
+                                <td>Diproses</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>TRX003</td>
+                                <td>05-11-2026</td>
+                                <td>Selesai</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Tombol Checkout -->
+        <section class="dashboard-section">
+            <div class="checkout-banner">
+                <div>
+                    <h2>Ingin Memesan Buku?</h2>
+                    <p>Temukan buku favoritmu dan lakukan pemesanan sekarang.</p>
+                </div>
+
+                <a href="checkout.html" class="btn">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>&copy; 2026 BookStore. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+</html>

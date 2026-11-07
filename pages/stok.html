@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - BookStore</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="stok-page">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="dashboard-logo">BookStore.</div>
+
+        <nav class="dashboard-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html" class="active">Katalog Buku</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+
+        <a href="dashboard.html" class="btn">
+            Kembali
+        </a>
+    </header>
+
+    <main class="stok-container">
+
+        <!-- Judul halaman -->
+        <section class="stok-heading">
+            <h1>Informasi Stok Buku</h1>
+            <p>Kelola dan temukan berbagai koleksi buku BookStore.</p>
+        </section>
+
+        <!-- Ringkasan stok -->
+        <section class="stok-summary">
+            <div class="summary-card">
+                <h3>Total Jenis Buku</h3>
+                <p id="totalBuku">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Stok Buku</h3>
+                <p id="totalStok">0</p>
+            </div>
+        </section>
+
+        <!-- Form tambah buku -->
+        <section class="card">
+
+            <h2>Tambah Buku Baru</h2>
+            <p class="stok-description">
+                Masukkan informasi buku untuk menambahkan stok baru.
+            </p>
+
+            <form id="formBuku">
+
+                <div class="stok-form-grid">
+
+                    <div class="form-group">
+                        <label for="judulBuku">Judul Buku</label>
+                        <input type="text" id="judulBuku"
+                            placeholder="Masukkan judul buku" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="penulisBuku">Penulis</label>
+                        <input type="text" id="penulisBuku"
+                            placeholder="Masukkan nama penulis" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kategoriBuku">Kategori</label>
+                        <select id="kategoriBuku" required>
+                            <option value="">Pilih kategori</option>
+                            <option value="Novel">Novel</option>
+                            <option value="Fiksi">Fiksi</option>
+                            <option value="Pengembangan Diri">Pengembangan Diri</option>
+                            <option value="Filsafat">Filsafat</option>
+                            <option value="Teknologi">Teknologi</option>
+                            <option value="Pendidikan">Pendidikan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hargaBuku">Harga (Rp)</label>
+                        <input type="number" id="hargaBuku"
+                            placeholder="Contoh: 85000" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stokBuku">Jumlah Stok</label>
+                        <input type="number" id="stokBuku"
+                            placeholder="Masukkan jumlah stok" min="1" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn">
+                    + Tambahkan Buku
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Tabel katalog -->
+        <section class="card">
+
+            <h2>Daftar Katalog Buku</h2>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Judul Buku</th>
+                            <th>Penulis</th>
+                            <th>Kategori</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelBuku">
+                        <!-- Data buku dimasukkan melalui JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>&copy; 2026 BookStore. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/stok.js"></script>
+
+</body>
+</html>
